@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/gray">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:layout_marginTop="13dp"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/infoTextViwe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Try to guess!"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/questionTextView"
+            android:layout_width="350dp"
+            android:layout_height="170dp"
+            android:layout_below="@+id/infoTextViwe"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/border_style"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/optionOneButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttons_styles"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:layout_marginTop="19dp"
+            android:layout_below="@+id/questionTextView"
+            android:layout_alignLeft="@+id/optionTwoButton"
+            android:layout_alignStart="@+id/optionTwoButton" />
+
+        <Button
+            android:id="@+id/optionTwoButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttons_styles"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+
+            android:layout_marginTop="17dp"
+            android:layout_below="@+id/optionOneButton"
+            android:layout_alignLeft="@+id/optionThreeButton"
+            android:layout_alignStart="@+id/optionThreeButton" />
+
+        <Button
+            android:id="@+id/optionThreeButton"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttons_styles"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:layout_below="@+id/optionTwoButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"/>
+    </RelativeLayout>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation_multi"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/dark_gray"
+        app:itemIconTint="@drawable/nav_menu_color_state"
+        app:itemTextColor="@drawable/nav_menu_color_state"
+        app:menu="@menu/menu_milti">
+
+    </android.support.design.widget.BottomNavigationView>
+
+</LinearLayout>
